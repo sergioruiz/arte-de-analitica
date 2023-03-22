@@ -1,0 +1,13 @@
+fig = plt.figure()
+#ax = Axes3D(fig)
+# Para usar Axes3D: https://matplotlib.org/2.0.2/mpl_toolkits/mplot3d/tutorial.html
+# https://matplotlib.org/stable/tutorials/toolkits/mplot3d.html
+ax = fig.add_subplot(111, projection='3d')
+# Si se queja de que no hay ejes, ver:
+# https://matplotlib.org/stable/gallery/mplot3d/subplot3d.html
+colores=['blue','red','green','blue','cyan','yellow','orange','black','pink','brown','purple']
+asignar = []
+for row in y:
+    asignar.append(colores[row])
+    #asignar.append(colores[row-2015])
+ax.scatter(X[:,0], X[:,1], X[:,2], c=asignar, s=60)
